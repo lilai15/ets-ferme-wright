@@ -9,7 +9,7 @@
 body {
   margin:0;
   font-family: Arial, sans-serif;
-  background:#87CEEB; /* Bleu ciel */
+  background:#87CEEB;
   color:#000;
 }
 
@@ -23,10 +23,6 @@ header h1 {
   margin:0;
   font-size:40px;
   color:#003366;
-}
-
-header p {
-  font-size:18px;
 }
 
 nav {
@@ -59,6 +55,19 @@ section {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:15px;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:10px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:10px;
+  height:150px;
+  object-fit:cover;
 }
 
 .btn {
@@ -96,39 +105,130 @@ footer {
 
 <header>
   <h1>ETS FERME WRIGHT</h1>
-  <p>Location de matériel événementiel & Chambres</p>
-  <a class="btn" href="#contact">Nous contacter</a>
+  <p>Location • Chambres • Avicole • Services événementiels</p>
 </header>
 
 <nav>
   <a href="#services">Services</a>
   <a href="#chambres">Chambres</a>
+  <a href="#avicole">Avicole</a>
+  <a href="#galerie">Galerie</a>
+  <a href="#reservation">Réservation</a>
+  <a href="#avis">Avis</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- SERVICES -->
 <section id="services">
   <div class="card">
     <h2>🎪 Nos Services</h2>
-    <p>Chaises, tables, podium, tentes et équipements événementiels.</p>
+    <p>
+      ETS FERME WRIGHT vous propose la location de matériel événementiel,
+      la location de chambres confortables et la vente de produits avicoles frais.
+    </p>
   </div>
 </section>
 
+<!-- CHAMBRES -->
 <section id="chambres">
   <div class="card">
-    <h2>🏠 Location de Chambres</h2>
-    <p>Chambres confortables pour courts et longs séjours.</p>
+    <h2>🏠 Chambres</h2>
+    <p>Chambres propres et confortables à prix abordables pour courts et longs séjours.</p>
   </div>
 </section>
 
+<!-- AVICOLE -->
+<section id="avicole">
+  <div class="card">
+    <h2>🐔 Produits Avicoles</h2>
+    <p>Œufs de table et poulets de chair de qualité.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🥚 Œufs</h3>
+      <p>2 700 FCFA / plateau</p>
+      <a class="btn" href="https://wa.me/22928073454?text=Commande%20œufs">Commander</a>
+    </div>
+
+    <div class="card">
+      <h3>🐔 Poulets</h3>
+      <p>3 000 - 4 000 FCFA</p>
+      <a class="btn" href="https://wa.me/22928073454?text=Commande%20poulets">Commander</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie">
+  <div class="card">
+    <h2>📸 Galerie</h2>
+    <p>Découvrez quelques images de nos services et activités.</p>
+
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Chaises">
+      <img src="https://via.placeholder.com/300x200?text=Chambres">
+      <img src="https://via.placeholder.com/300x200?text=Ferme">
+      <img src="https://via.placeholder.com/300x200?text=Evenement">
+    </div>
+  </div>
+</section>
+
+<!-- RÉSERVATION -->
+<section id="reservation">
+  <div class="card">
+    <h2>📅 Réservation</h2>
+    <p>Réservez rapidement via WhatsApp.</p>
+
+    <a class="btn" href="https://wa.me/22928073454?text=Je%20veux%20réserver%20un%20service">
+      Réserver maintenant
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Formulaire rapide</h3>
+    <p>Nom :</p>
+    <input type="text" placeholder="Votre nom">
+
+    <p>Service :</p>
+    <input type="text" placeholder="Chambre / événement / produits">
+
+    <p>Date :</p>
+    <input type="date">
+
+    <br><br>
+    <button class="btn">Envoyer</button>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis">
+  <div class="card">
+    <h2>⭐ Appréciation du site</h2>
+    <p>Laissez votre avis sur nos services.</p>
+
+    <textarea rows="4" style="width:100%;" placeholder="Écrivez votre avis ici..."></textarea>
+    <br><br>
+    <button class="btn">Publier l'avis</button>
+  </div>
+
+  <div class="card">
+    <h3>Avis clients</h3>
+    <p>⭐ Très bon service et rapide !</p>
+    <p>⭐ Chambres propres et accueillantes.</p>
+    <p>⭐ Produits avicoles de qualité.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="card">
     <h2>📞 Contact</h2>
+    <p><b>Adresse :</b> Lokossa – Adjakomey</p>
+    <p><b>Téléphone :</b> 01 28 07 34 54</p>
+    <p><b>Email :</b> lbbeach6@gmail.com</p>
 
-    <p><strong>Adresse :</strong> Bénin, Lokossa – Adjakomey, non loin de Mon Avenir</p>
-    <p><strong>Téléphone :</strong> 01 28 07 34 54</p>
-    <p><strong>Email :</strong> lbbeach6@gmail.com</p>
-
-    <a class="btn" href="mailto:lbbeach6@gmail.com">Envoyer un email</a>
+    <a class="btn" href="mailto:lbbeach6@gmail.com">Email</a>
   </div>
 </section>
 
@@ -136,89 +236,9 @@ footer {
   © 2026 ETS FERME WRIGHT - Tous droits réservés
 </footer>
 
-<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/22928073454" target="_blank">
 💬 WhatsApp
 </a>
 
 </body>
 </html>
-
-<div class="card">
-  <h2>📅 Réserver maintenant</h2>
-
-  <p>Réservation rapide et simple via WhatsApp.</p>
-
-  <a class="btn" href="https://wa.me/22928075434?text=Bonjour%20je%20veux%20réserver%20une%20chambre%20ou%20un%20service">
-    💬 Réserver sur WhatsApp
-  </a>
-</div>
-<div class="card">
-  <h2>💳 Paiement CELTIS Money</h2>
-
-  <p><b>Pour confirmer votre réservation :</b></p>
-
-  <h3>📱 CELTIS Money</h3>
-  <p>Numéro de paiement : <b>01 28 07 34 54</b></p>
-
-  <p><b>⚠️ Instructions :</b></p>
-  <p>
-    1. Effectuez le paiement via CELTIS Money<br>
-    2. Prenez une capture du reçu<br>
-    3. Envoyez la preuve sur WhatsApp pour confirmation
-  </p>
-
-  <a class="btn" href="https://wa.me/22928075434?text=Bonjour%20j'ai%20effectué%20un%20paiement%20CELTIS%20Money%20pour%20une%20réservation.%20Voici%20ma%20preuve.">
-    📲 Envoyer preuve sur WhatsApp
-  </a>
-</div>
-
-<section id="avicole" style="background:#87CEEB; padding:40px 20px;">
-
-  <div class="card">
-    <h2>🐔 Section Avicole</h2>
-
-    <p>
-      ETS FERME WRIGHT est aussi spécialisée dans la production et la vente de produits avicoles frais :
-      œufs de table et poulets de chair de qualité.
-    </p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>🥚 Œufs de table</h3>
-      <p><b>Prix :</b> 2 700 FCFA / plateau (30 œufs)</p>
-      <p>Œufs frais produits localement chaque jour.</p>
-
-      <a class="btn" href="https://wa.me/22928075434?text=Bonjour%20je%20veux%20commander%20des%20oeufs%20de%20table%20à%202700%20FCFA">
-        📲 Commander des œufs
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>🐔 Poulets de chair</h3>
-      <p><b>Prix :</b> 3 000 à 4 000 FCFA / poulet</p>
-      <p>Poulets bien élevés, disponibles vivants ou prêts à cuire.</p>
-
-      <a class="btn" href="https://wa.me/22928075434?text=Bonjour%20je%20veux%20commander%20des%20poulets%20de%20chair">
-        📲 Commander des poulets
-      </a>
-    </div>
-
-  </div>
-
-  <div class="card">
-    <h3>🚚 Livraison</h3>
-    <p>
-      Livraison disponible à Lokossa et environs. Frais selon la distance.
-    </p>
-
-    <a class="btn" href="https://wa.me/22928075434?text=Bonjour%20je%20veux%20informations%20sur%20la%20livraison%20des%20produits%20avicoles">
-      🚚 Demander livraison
-    </a>
-  </div>
-
-</section>
-
-+
