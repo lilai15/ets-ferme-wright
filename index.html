@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ETS FERME WRIGHT</title>
+
   <style>
     body {
       margin: 0;
@@ -11,81 +12,172 @@
       color: #fff;
     }
 
-    .container {
+    /* MENU */
+    .menu {
+      background: rgba(0,0,0,0.5);
+      padding: 15px;
       text-align: center;
-      padding: 50px;
+      position: sticky;
+      top: 0;
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+    .menu a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    h2 {
-      font-weight: normal;
-      margin-bottom: 30px;
+    .menu a:hover {
+      text-decoration: underline;
     }
 
-    .box {
-      background: rgba(0, 0, 0, 0.3);
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .header h1 {
+      font-size: 45px;
+      margin: 0;
+    }
+
+    /* SECTIONS */
+    .section {
+      background: rgba(0,0,0,0.3);
+      margin: 20px;
       padding: 20px;
-      margin: 20px auto;
-      width: 80%;
       border-radius: 10px;
     }
 
-    .contact {
-      margin-top: 30px;
-      font-size: 18px;
-      line-height: 1.8;
+    /* GALERIE */
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
+    .gallery img {
+      width: 250px;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* PRIX */
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: yellow;
+    }
+
+    /* BOUTON */
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #0077ff;
+      background: #25D366;
       color: white;
-      text-decoration: none;
+      padding: 12px 20px;
       border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
-    .btn:hover {
-      background: #005fd1;
+    /* CARTE */
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>ETS FERME WRIGHT</h1>
-    <h2>Location de chambres</h2>
+<!-- MENU -->
+<div class="menu">
+  <a href="#accueil">Accueil</a>
+  <a href="#chambres">Chambres</a>
+  <a href="#galerie">Galerie</a>
+  <a href="#prix">Prix</a>
+  <a href="#reservation">Réservation</a>
+  <a href="#localisation">Localisation</a>
+</div>
 
-    <div class="box">
-      <p>
-        Bienvenue chez <strong>ETS FERME WRIGHT</strong>, votre solution fiable pour la location de chambres à LOKOSSA.
-        Nous vous offrons des espaces confortables, accessibles et adaptés à vos besoins.
-      </p>
-    </div>
+<!-- ACCUEIL -->
+<div class="header" id="accueil">
+  <h1>ETS FERME WRIGHT</h1>
+  <p>Location de chambres à LOKOSSA</p>
+</div>
 
-    <div class="box">
-      <h3>📍 Localisation</h3>
-      <p>
-        LOKOSSA - Adjakomey<br>
-        Non loin de l’école Mon Avenir
-      </p>
-    </div>
+<!-- CHAMBRES -->
+<div class="section" id="chambres">
+  <h2>🛏️ Nos chambres</h2>
+  <p>
+    Chambres propres, sécurisées et confortables adaptées aux étudiants et travailleurs.
+  </p>
+</div>
 
-    <div class="box contact">
-      <h3>📞 Contact</h3>
-      <p>
-        Téléphone : 01 56 05 80 00
-      </p>
+<!-- GALERIE -->
+<div class="section" id="galerie">
+  <h2>📸 Galerie</h2>
 
-      <a class="btn" href="tel:0156058000">Appeler maintenant</a>
-    </div>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/300x200" alt="chambre 1">
+    <img src="https://via.placeholder.com/300x200" alt="chambre 2">
+    <img src="https://via.placeholder.com/300x200" alt="chambre 3">
   </div>
+</div>
+
+<!-- PRIX -->
+<div class="section" id="prix">
+  <h2>💰 Prix des chambres</h2>
+
+  <p class="price">Chambre simple : 15 000 FCFA / mois</p>
+  <p class="price">Chambre confort : 25 000 FCFA / mois</p>
+  <p class="price">Chambre VIP : 40 000 FCFA / mois</p>
+</div>
+
+<!-- RÉSERVATION -->
+<div class="section" id="reservation">
+  <h2>📅 Réservation</h2>
+
+  <p>Réservez directement via WhatsApp :</p>
+
+  <a class="btn"
+     href="https://wa.me/0156058000"
+     target="_blank">
+     📲 Réserver maintenant
+  </a>
+</div>
+
+<!-- LOCALISATION -->
+<div class="section" id="localisation">
+  <h2>📍 Localisation</h2>
+
+  <p>LOKOSSA - Adjakomey, non loin de l’école Mon Avenir</p>
+
+  <!-- GOOGLE MAPS -->
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18..."
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 ETS FERME WRIGHT - Tous droits réservés
+</footer>
 
 </body>
 </html>
