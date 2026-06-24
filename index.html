@@ -6,115 +6,117 @@
 <title>ETS FERME WRIGHT</title>
 
 <style>
+html { scroll-behavior: smooth; }
+
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background:#87CEEB;
-  color:#000;
+  background: #87CEEB;
+  color: #000;
 }
 
 header {
   background: rgba(255,255,255,0.7);
-  text-align:center;
-  padding:60px 20px;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 header h1 {
-  margin:0;
-  font-size:40px;
-  color:#003366;
+  margin: 0;
+  font-size: 40px;
+  color: #003366;
 }
 
 nav {
-  background:#005f99;
-  text-align:center;
-  padding:10px;
+  background: #005f99;
+  text-align: center;
+  padding: 10px;
 }
 
 nav a {
-  color:white;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:bold;
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
-  padding:40px 20px;
-  max-width:1000px;
-  margin:auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .card {
-  background:rgba(255,255,255,0.85);
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
 }
 
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
-
-.gallery {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:10px;
-}
-
-.gallery img {
-  width:100%;
-  border-radius:10px;
-  height:150px;
-  object-fit:cover;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .btn {
-  display:inline-block;
-  background:#003366;
-  color:white;
-  padding:10px 15px;
-  text-decoration:none;
-  border-radius:6px;
-  margin-top:10px;
+  display: inline-block;
+  background: #003366;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.btn-whatsapp {
+  background: #25D366;
 }
 
 footer {
-  background:#005f99;
-  color:white;
-  text-align:center;
-  padding:15px;
+  background: #005f99;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
 .whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <h1>ETS FERME WRIGHT</h1>
+
+  <p><b>Des chambres confortables, des événements réussis, des produits frais.</b></p>
+
   <p>Location • Chambres • Avicole • Services événementiels</p>
 </header>
 
+<!-- NAV -->
 <nav>
   <a href="#services">Services</a>
   <a href="#chambres">Chambres</a>
   <a href="#avicole">Avicole</a>
-  <a href="#galerie">Galerie</a>
-  <a href="#reservation">Réservation</a>
-  <a href="#avis">Avis</a>
+  <a href="#reservation">Réserver</a>
+  <a href="#paiement">Paiement</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -122,10 +124,13 @@ footer {
 <section id="services">
   <div class="card">
     <h2>🎪 Nos Services</h2>
+
     <p>
-      ETS FERME WRIGHT vous propose la location de matériel événementiel,
-      la location de chambres confortables et la vente de produits avicoles frais.
+      ETS FERME WRIGHT vous propose des services de location de chambres,
+      d’organisation événementielle et de production avicole de qualité.
+      Nous garantissons confort, fraîcheur et satisfaction à tous nos clients.
     </p>
+
   </div>
 </section>
 
@@ -133,7 +138,7 @@ footer {
 <section id="chambres">
   <div class="card">
     <h2>🏠 Chambres</h2>
-    <p>Chambres propres et confortables à prix abordables pour courts et longs séjours.</p>
+    <p>Chambres propres, confortables et abordables pour courts et longs séjours.</p>
   </div>
 </section>
 
@@ -141,82 +146,58 @@ footer {
 <section id="avicole">
   <div class="card">
     <h2>🐔 Produits Avicoles</h2>
-    <p>Œufs de table et poulets de chair de qualité.</p>
+    <p>Œufs et poulets de qualité issus de notre ferme.</p>
   </div>
 
   <div class="grid">
     <div class="card">
       <h3>🥚 Œufs</h3>
       <p>2 700 FCFA / plateau</p>
-      <a class="btn" href="https://wa.me/22928073454?text=Commande%20œufs">Commander</a>
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/2290128073454?text=Commande%20œufs">
+         Commander
+      </a>
     </div>
 
     <div class="card">
       <h3>🐔 Poulets</h3>
       <p>3 000 - 4 000 FCFA</p>
-      <a class="btn" href="https://wa.me/22928073454?text=Commande%20poulets">Commander</a>
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/2290128073454?text=Commande%20poulets">
+         Commander
+      </a>
     </div>
   </div>
 </section>
 
-<!-- GALERIE -->
-<section id="galerie">
-  <div class="card">
-    <h2>📸 Galerie</h2>
-    <p>Découvrez quelques images de nos services et activités.</p>
-
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300x200?text=Chaises">
-      <img src="https://via.placeholder.com/300x200?text=Chambres">
-      <img src="https://via.placeholder.com/300x200?text=Ferme">
-      <img src="https://via.placeholder.com/300x200?text=Evenement">
-    </div>
-  </div>
-</section>
-
-<!-- RÉSERVATION -->
+<!-- RESERVATION -->
 <section id="reservation">
   <div class="card">
-    <h2>📅 Réservation</h2>
-    <p>Réservez rapidement via WhatsApp.</p>
+    <h2>📅 Réservation rapide</h2>
+    <p>Réservez directement via WhatsApp en un clic.</p>
 
-    <a class="btn" href="https://wa.me/22928073454?text=Je%20veux%20réserver%20un%20service">
-      Réserver maintenant
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/2290128073454?text=Bonjour%2C%20je%20veux%20faire%20une%20réservation">
+       📲 Réserver par WhatsApp
     </a>
-  </div>
-
-  <div class="card">
-    <h3>Formulaire rapide</h3>
-    <p>Nom :</p>
-    <input type="text" placeholder="Votre nom">
-
-    <p>Service :</p>
-    <input type="text" placeholder="Chambre / événement / produits">
-
-    <p>Date :</p>
-    <input type="date">
-
-    <br><br>
-    <button class="btn">Envoyer</button>
   </div>
 </section>
 
-<!-- AVIS -->
-<section id="avis">
+<!-- 💳 PAIEMENT (AJOUTÉ ICI) -->
+<section id="paiement">
   <div class="card">
-    <h2>⭐ Appréciation du site</h2>
-    <p>Laissez votre avis sur nos services.</p>
+    <h2>💳 Paiement</h2>
 
-    <textarea rows="4" style="width:100%;" placeholder="Écrivez votre avis ici..."></textarea>
-    <br><br>
-    <button class="btn">Publier l'avis</button>
-  </div>
+    <p>
+      Paiement possible via Mobile Money. Après paiement, envoyez la preuve sur WhatsApp.
+    </p>
 
-  <div class="card">
-    <h3>Avis clients</h3>
-    <p>⭐ Très bon service et rapide !</p>
-    <p>⭐ Chambres propres et accueillantes.</p>
-    <p>⭐ Produits avicoles de qualité.</p>
+    <p><b>Numéro de paiement :</b> +2290128073454</p>
+
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/2290128073454?text=J%27ai%20effectué%20un%20paiement%2C%20voici%20la%20preuve">
+       📲 Envoyer preuve de paiement
+    </a>
   </div>
 </section>
 
@@ -224,19 +205,21 @@ footer {
 <section id="contact">
   <div class="card">
     <h2>📞 Contact</h2>
-    <p><b>Adresse :</b> Lokossa – Adjakomey</p>
-    <p><b>Téléphone :</b> 01 28 07 34 54</p>
+
+    <p><b>Téléphone :</b> +2290128073454</p>
     <p><b>Email :</b> lbbeach6@gmail.com</p>
 
-    <a class="btn" href="mailto:lbbeach6@gmail.com">Email</a>
+    <a class="btn" href="mailto:lbbeach6@gmail.com">Envoyer un email</a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2026 ETS FERME WRIGHT - Tous droits réservés
+  © 2026 ETS FERME WRIGHT
 </footer>
 
-<a class="whatsapp" href="https://wa.me/22928073454" target="_blank">
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/2290128073454" target="_blank">
 💬 WhatsApp
 </a>
 
