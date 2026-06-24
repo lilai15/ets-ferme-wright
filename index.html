@@ -1,183 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>ETS FERME WRIGHT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETS FERME WRIGHT</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: skyblue;
-      color: #fff;
-    }
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#87CEEB; /* Bleu ciel */
+  color:#000;
+}
 
-    /* MENU */
-    .menu {
-      background: rgba(0,0,0,0.5);
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-    }
+header {
+  background: rgba(255,255,255,0.7);
+  text-align:center;
+  padding:60px 20px;
+}
 
-    .menu a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header h1 {
+  margin:0;
+  font-size:40px;
+  color:#003366;
+}
 
-    .menu a:hover {
-      text-decoration: underline;
-    }
+header p {
+  font-size:18px;
+}
 
-    /* HEADER */
-    .header {
-      text-align: center;
-      padding: 60px 20px;
-    }
+nav {
+  background:#005f99;
+  text-align:center;
+  padding:10px;
+}
 
-    .header h1 {
-      font-size: 45px;
-      margin: 0;
-    }
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    /* SECTIONS */
-    .section {
-      background: rgba(0,0,0,0.3);
-      margin: 20px;
-      padding: 20px;
-      border-radius: 10px;
-    }
+section {
+  padding:40px 20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-    /* GALERIE */
-    .gallery {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.card {
+  background:rgba(255,255,255,0.85);
+  padding:20px;
+  margin:15px 0;
+  border-radius:10px;
+}
 
-    .gallery img {
-      width: 250px;
-      height: 180px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
 
-    /* PRIX */
-    .price {
-      font-size: 20px;
-      font-weight: bold;
-      color: yellow;
-    }
+.btn {
+  display:inline-block;
+  background:#003366;
+  color:white;
+  padding:10px 15px;
+  text-decoration:none;
+  border-radius:6px;
+  margin-top:10px;
+}
 
-    /* BOUTON */
-    .btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+footer {
+  background:#005f99;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
 
-    /* CARTE */
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.5);
-      margin-top: 20px;
-    }
-  </style>
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
-<!-- MENU -->
-<div class="menu">
-  <a href="#accueil">Accueil</a>
-  <a href="#chambres">Chambres</a>
-  <a href="#galerie">Galerie</a>
-  <a href="#prix">Prix</a>
-  <a href="#reservation">Réservation</a>
-  <a href="#localisation">Localisation</a>
-</div>
-
-<!-- ACCUEIL -->
-<div class="header" id="accueil">
+<header>
   <h1>ETS FERME WRIGHT</h1>
-  <p>Location de chambres à LOKOSSA</p>
-</div>
+  <p>Location de matériel événementiel & Chambres</p>
+  <a class="btn" href="#contact">Nous contacter</a>
+</header>
 
-<!-- CHAMBRES -->
-<div class="section" id="chambres">
-  <h2>🛏️ Nos chambres</h2>
-  <p>
-    Chambres propres, sécurisées et confortables adaptées aux étudiants et travailleurs.
-  </p>
-</div>
+<nav>
+  <a href="#services">Services</a>
+  <a href="#chambres">Chambres</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<!-- GALERIE -->
-<div class="section" id="galerie">
-  <h2>📸 Galerie</h2>
-
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x200" alt="chambre 1">
-    <img src="https://via.placeholder.com/300x200" alt="chambre 2">
-    <img src="https://via.placeholder.com/300x200" alt="chambre 3">
+<section id="services">
+  <div class="card">
+    <h2>🎪 Nos Services</h2>
+    <p>Chaises, tables, podium, tentes et équipements événementiels.</p>
   </div>
-</div>
+</section>
 
-<!-- PRIX -->
-<div class="section" id="prix">
-  <h2>💰 Prix des chambres</h2>
+<section id="chambres">
+  <div class="card">
+    <h2>🏠 Location de Chambres</h2>
+    <p>Chambres confortables pour courts et longs séjours.</p>
+  </div>
+</section>
 
-  <p class="price">Chambre simple : 15 000 FCFA / mois</p>
-  <p class="price">Chambre confort : 25 000 FCFA / mois</p>
-  <p class="price">Chambre VIP : 40 000 FCFA / mois</p>
-</div>
+<section id="contact">
+  <div class="card">
+    <h2>📞 Contact</h2>
 
-<!-- RÉSERVATION -->
-<div class="section" id="reservation">
-  <h2>📅 Réservation</h2>
+    <p><strong>Adresse :</strong> Bénin, Lokossa – Adjakomey, non loin de Mon Avenir</p>
+    <p><strong>Téléphone :</strong> 01 28 07 54 34</p>
+    <p><strong>Email :</strong> lbbeach6@gmail.com</p>
 
-  <p>Réservez directement via WhatsApp :</p>
+    <a class="btn" href="mailto:lbbeach6@gmail.com">Envoyer un email</a>
+  </div>
+</section>
 
-  <a class="btn"
-     href="https://wa.me/0156058000"
-     target="_blank">
-     📲 Réserver maintenant
-  </a>
-</div>
-
-<!-- LOCALISATION -->
-<div class="section" id="localisation">
-  <h2>📍 Localisation</h2>
-
-  <p>LOKOSSA - Adjakomey, non loin de l’école Mon Avenir</p>
-
-  <!-- GOOGLE MAPS -->
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18..."
-    allowfullscreen>
-  </iframe>
-</div>
-
-<!-- FOOTER -->
 <footer>
   © 2026 ETS FERME WRIGHT - Tous droits réservés
 </footer>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/2290128075434" target="_blank">
+💬 WhatsApp
+</a>
 
 </body>
 </html>
